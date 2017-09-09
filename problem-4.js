@@ -34,7 +34,7 @@ let euler4 = (
                 // E.g., walk down from 999*999 through the factors in a breadth first motion.
                 // This is a naive walk as it will do both 999*998 and 998*999
                 (u) => (i) => 
-                snd(i) + 1 > u ? 
+                snd(i) > u ? 
                     pair(u) (fst(i)-1) : 
                     pair(fst(i)-1) (snd(i)+1)
             )
